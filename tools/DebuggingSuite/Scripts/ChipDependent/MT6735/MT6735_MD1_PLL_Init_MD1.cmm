@@ -1,0 +1,264 @@
+;;;;;;;;;; register base
+&PLL_MIXEDSYS_base=0x80120000
+&CONFIG_base=0x80000000
+&MEM_CLASS="sd"
+
+;;;;;;;;;; options
+&FH_OFF=0
+&MD2G_FROM_RF2=0
+&PLL_OFF=0
+&SIM_26M=0
+&RF2_FAST_SETTLE=0
+&WHPLL_TDD_MODE=0
+&WHPLL_FOR_LTEDSP=1
+
+
+;;;;;;;;;; register address
+
+&PLL_MD_CR4PLL_DEV_CON=(&PLL_MIXEDSYS_base+0x03C)
+
+&PLL_PLL_CON1=(&PLL_MIXEDSYS_base+0x044)
+&PLL_PLL_CON2=(&PLL_MIXEDSYS_base+0x048)
+&PLL_PLL_CON3=(&PLL_MIXEDSYS_base+0x04C)
+&PLL_PLL_CON4=(&PLL_MIXEDSYS_base+0x050)
+&PLL_PLL_CON2_1=(&PLL_MIXEDSYS_base+0x024)
+&PLL_PLL_MTCMOS_CON0=(&PLL_MIXEDSYS_base+0x028)
+
+
+&PLL_CLKSW_CKSEL0=(&PLL_MIXEDSYS_base+0x060)
+&PLL_CLKSW_CKSEL1=(&PLL_MIXEDSYS_base+0x064)
+&PLL_CLKSW_CKSEL2=(&PLL_MIXEDSYS_base+0x068)
+&PLL_CLKSW_CKSEL3=(&PLL_MIXEDSYS_base+0x06C)
+&PLL_CLKSW_CKSEL4=(&PLL_MIXEDSYS_base+0x094)
+&PLL_CLKSW_CKSEL5=(&PLL_MIXEDSYS_base+0x098)
+&PLL_CLKSW_CKSEL6=(&PLL_MIXEDSYS_base+0x09C)
+&PLL_CLKSW_CKSEL7=(&PLL_MIXEDSYS_base+0x0A0)
+&PLL_CLKSW_CKSEL8=(&PLL_MIXEDSYS_base+0x0A4)
+
+
+&PLL_CLKSW_FDIV0=(&PLL_MIXEDSYS_base+0x070)
+&PLL_CLKSW_FDIV1=(&PLL_MIXEDSYS_base+0x074)
+&PLL_CLKSW_FDIV2=(&PLL_MIXEDSYS_base+0x078)
+&PLL_CLKSW_FDIV3=(&PLL_MIXEDSYS_base+0x07C)
+&PLL_CLKSW_FDIV4=(&PLL_MIXEDSYS_base+0x080)
+&PLL_CLKSW_FDIV5=(&PLL_MIXEDSYS_base+0x084)
+&PLL_CLKSW_FDIV6=(&PLL_MIXEDSYS_base+0x088)
+&PLL_CLKSW_FDIV7=(&PLL_MIXEDSYS_base+0x08C)
+
+&PLL_CLKSW_CONN_CON0=(&PLL_MIXEDSYS_base+0x090)
+
+&PLL_DFS_CON7=(&PLL_MIXEDSYS_base+0x0AC)
+&PLL_DFS_CON8=(&PLL_MIXEDSYS_base+0x0B0)
+&PLL_DFS_CON9=(&PLL_MIXEDSYS_base+0x0B4)
+&PLL_DPM_SEL_SW_CTL0=(&PLL_MIXEDSYS_base+0x0B8)
+&PLL_DPM_SEL_SW_CTL1=(&PLL_MIXEDSYS_base+0x0BC)
+
+&PLL_MDPLL_CON0=(&PLL_MIXEDSYS_base+0x100)
+&PLL_MDPLL_CON1=(&PLL_MIXEDSYS_base+0x104)
+&PLL_MDPLL_CON2=(&PLL_MIXEDSYS_base+0x108)
+&PLL_MDPLL_CON3=(&PLL_MIXEDSYS_base+0x10C)
+&PLL_MDPLL_CON4=(&PLL_MIXEDSYS_base+0x110)
+
+
+&PLL_TDPLL_CON0=(&PLL_MIXEDSYS_base+0x120)
+&PLL_TDPLL_CON1=(&PLL_MIXEDSYS_base+0x124)
+&PLL_TDPLL_CON2=(&PLL_MIXEDSYS_base+0x128)
+&PLL_TDPLL_CON3=(&PLL_MIXEDSYS_base+0x12C)
+&PLL_TDPLL_CON4=(&PLL_MIXEDSYS_base+0x130)
+
+
+&PLL_MCUPLL_CON0=(&PLL_MIXEDSYS_base+0x140)
+&PLL_MCUPLL_CON1=(&PLL_MIXEDSYS_base+0x144)
+&PLL_MCUPLL_CON2=(&PLL_MIXEDSYS_base+0x148)
+&PLL_MCUPLL_CON3=(&PLL_MIXEDSYS_base+0x14C)
+
+&PLL_ARM7PLL_CON0=(&PLL_MIXEDSYS_base+0x150)
+&PLL_ARM7PLL_CON2=(&PLL_MIXEDSYS_base+0x158)
+&PLL_ARM7PLL_CON3=(&PLL_MIXEDSYS_base+0x15C)
+
+&PLL_WPLL_CON0=(&PLL_MIXEDSYS_base+0x1C0)
+&PLL_WPLL_CON1=(&PLL_MIXEDSYS_base+0x1C4)
+&PLL_WPLL_CON2=(&PLL_MIXEDSYS_base+0x1C8)
+&PLL_WPLL_CON3=(&PLL_MIXEDSYS_base+0x1CC)
+
+&PLL_OGTWPLL_CON0=(&PLL_MIXEDSYS_base+0x1D0)
+
+&PLL_CR4PLL2_CON0=(&PLL_MIXEDSYS_base+0x1E0)
+
+
+&PLL_WHPLL_CON0=(&PLL_MIXEDSYS_base+0x200)
+&PLL_WHPLL_CON1=(&PLL_MIXEDSYS_base+0x204)
+&PLL_WHPLL_CON2=(&PLL_MIXEDSYS_base+0x208)
+&PLL_WHPLL_CON3=(&PLL_MIXEDSYS_base+0x20C)
+&PLL_WHPLL_CON4=(&PLL_MIXEDSYS_base+0x210)
+
+&PLL_RSV_CON0=(&PLL_MIXEDSYS_base+0x360)
+
+&PLL_FH_CON4=(&PLL_MIXEDSYS_base+0x510)
+&PLL_FH_CON5=(&PLL_MIXEDSYS_base+0x514)
+&PLL_FH_CON6=(&PLL_MIXEDSYS_base+0x518)
+&PLL_FH_CON7=(&PLL_MIXEDSYS_base+0x51C)
+&PLL_FH_CON8=(&PLL_MIXEDSYS_base+0x584)
+&PLL_FH_CON8_1=(&PLL_MIXEDSYS_base+0x588)
+
+&PLL_FH_CON_FREQ_BASE=(&PLL_MIXEDSYS_base+0x5A0)
+
+
+&PLL_PLLTD_CON0=(&PLL_MIXEDSYS_base+0x700)
+&PLL_PLLTD_CON1=(&PLL_MIXEDSYS_base+0x704)
+&PLL_PLLTD_CON2=(&PLL_MIXEDSYS_base+0x708)
+&PLL_PLLTD_CON3=(&PLL_MIXEDSYS_base+0x70C)
+&PLL_PLLTD_CON4=(&PLL_MIXEDSYS_base+0x710)
+&PLL_PLLTD_CON5=(&PLL_MIXEDSYS_base+0x714)
+&PLL_PLLTD_CON6=(&PLL_MIXEDSYS_base+0x718)
+&PLL_PLLTD_CON7=(&PLL_MIXEDSYS_base+0x71C)
+
+&PLL_PLL_RESERVE_REG=(&PLL_MIXEDSYS_base+0x800)
+&PLL_MDPLL_CON3_SUB=(&PLL_MIXEDSYS_base+0x814)
+&PLL_TDPLL_CON0_SUB=(&PLL_MIXEDSYS_base+0x820)
+
+
+&PLL_MD_GLOBAL_CON1=(&CONFIG_base+0x45C)
+
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;; 	// Sequence to enable PLL
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+
+PRINT "MD PLL init cmm start"
+;; 	//wait  100us  for CLKSQ and BIAS_LPF enable settle, but no need to wait when boot up
+wait 1.ms
+
+;; //hopping HW mode enable
+d.s &PLL_PLL_RESERVE_REG %word %le 0x0005
+d.s &PLL_DFS_CON7 %word %le 0x00580 		;; //Adjust PLL settle to 100us
+
+;; 	// force 26M and PLL on
+d.s &PLL_DFS_CON7 %word %le 0x01FF	
+
+;; 	// enable MTCMOS and TOPSM control
+d.s &PLL_PLL_CON3 %word %le 0x0000		;; // power on from HW
+d.s &PLL_PLL_MTCMOS_CON0 %word %le 0x0000 ;;// power on from HW
+
+;; 	// enable TOPSM control
+d.s &PLL_PLL_CON2 %word %le 0x0000		;; // 0x80120048, bit 12, 10, 8, 6 and 2 set to 0 to enable TOPSM control
+d.s &PLL_PLL_CON2_1 %word %le 0x0000		;; // 0x80120048, bit 12, 10, 8, 6 and 2 set to 0 to enable TOPSM control
+
+;; 	// enable delay control
+d.s &PLL_PLLTD_CON0 %word %le 0x0000		;; //0x80120700, bit 0 set to 0 to enable delay control
+
+
+d.s &PLL_TDPLL_CON0_SUB %word %le data.word(&MEM_CLASS:&PLL_TDPLL_CON0_SUB)&0xBFFF		
+d.s &PLL_TDPLL_CON0 %word %le 0x450F
+d.s &PLL_TDPLL_CON1 %word %le 0x0416
+d.s &PLL_TDPLL_CON4 %word %le 0x0004
+d.s &PLL_TDPLL_CON3 %word %le data.word(&MEM_CLASS:&PLL_TDPLL_CON3)|0x0100
+d.s &PLL_TDPLL_CON3 %word %le data.word(&MEM_CLASS:&PLL_TDPLL_CON3)&0xFFDF
+
+;; //LTE DCXO force on
+d.s &PLL_PLL_CON4 %word %le 0x0013
+
+;; // WHPLL for LTEDSP
+d.s &PLL_DPM_SEL_SW_CTL0 %word %le 0x9A9B
+d.s &PLL_DPM_SEL_SW_CTL1 %word %le 0x0999
+
+;; //CR4PLL default = 1196MHz
+;;d.s &PLL_MCUPLL_CON2 %word %le 0x802C
+;;d.s &PLL_MCUPLL_CON3 %word %le 0x0000
+
+;; // CR4PLL hopping
+;;d.s &PLL_FH_CON_FREQ_BASE %word %le 0x94A8
+
+;; //WHPLL 598Mhz
+d.s &PLL_WHPLL_CON2 %word %le 0x805C
+d.s &PLL_WHPLL_CON3 %word %le 0x0000
+
+d.s &PLL_MDPLL_CON3_SUB %word %le 0x0F13
+d.s &PLL_MDPLL_CON3 %word %le 0x0F13
+
+d.s &PLL_MDPLL_CON0 %word %le 0x050F
+
+;; 	//enable MDPLL
+d.s &PLL_MDPLL_CON0 %word %le data.word(&MEM_CLASS:&PLL_MDPLL_CON0)|0x8000		;; //0x80120100, bit 15 set to 1 to enable MDPLL
+
+;; 	//enable MCUPLL
+d.s &PLL_MCUPLL_CON0 %word %le data.word(&MEM_CLASS:&PLL_MCUPLL_CON0)|0x8000		;; //0x80120140, bit 15 set to 1 to enable MCUPLL1
+
+;; 	//enable WPLL
+d.s &PLL_WPLL_CON0 %word %le data.word(&MEM_CLASS:&PLL_WPLL_CON0)|0x8000		;; //0x801201C0, bit 15 set to 1 to enable WPLL
+
+;; 	//enable WHPLL
+d.s &PLL_WHPLL_CON0 %word %le data.word(&MEM_CLASS:&PLL_WHPLL_CON0)|0x8000		;; //0x80120200, bit 15 set to 1 to enable WHPLL
+
+;; //enable LTEDSP 300Mhz
+d.s &PLL_ARM7PLL_CON2 %word %le 0x802E
+d.s &PLL_ARM7PLL_CON3 %word %le 0x09D8
+d.s &PLL_ARM7PLL_CON0 %word %le data.word(&MEM_CLASS:&PLL_ARM7PLL_CON0)|0x8000
+
+
+
+
+;; 	for(loop_var=0; loop_var<20; loop_var++);
+wait 1.ms
+;; 	// enable FH delay control
+
+;; //CR4 DVI MACRO CONTROL
+d.s &PLL_MD_CR4PLL_DEV_CON %word %le data.word(&MEM_CLASS:&PLL_MD_CR4PLL_DEV_CON)|0x0002
+
+;; 	for(loop_var=0; loop_var<5; loop_var++);
+wait 1.ms
+d.s &PLL_MD_CR4PLL_DEV_CON %word %le data.word(&MEM_CLASS:&PLL_MD_CR4PLL_DEV_CON)|0x0020
+wait 1.ms
+d.s &PLL_MD_CR4PLL_DEV_CON %word %le data.word(&MEM_CLASS:&PLL_MD_CR4PLL_DEV_CON)|0x5000
+
+;; //LTEDSPPLL Hopping (disable)
+d.s &PLL_FH_CON8_1 %word %le 0x0070
+d.s &PLL_FH_CON8 %word %le 0x0000
+
+;; // CR4PLL down hopping 4% (disable)
+d.s &PLL_FH_CON5 %word %le 0x0070
+;; //free run mode
+d.s &PLL_FH_CON4 %word %le 0x0000
+
+;; //CR4 DIV Macro control - release to TOPSM
+d.s &PLL_MD_CR4PLL_DEV_CON %word %le data.word(&MEM_CLASS:&PLL_MD_CR4PLL_DEV_CON)&0xFEEE
+wait 1.ms
+;; 
+d.s &PLL_MDPLL_CON0 %word %le data.word(&MEM_CLASS:&PLL_MDPLL_CON0)&0x7FFF
+;; //Disable MDPLL autok
+d.s &PLL_MDPLL_CON2 %word %le data.word(&MEM_CLASS:&PLL_MDPLL_CON2)&0x7FFF
+wait 1.ms
+;; //enable MDPLL
+d.s &PLL_MDPLL_CON0 %word %le data.word(&MEM_CLASS:&PLL_MDPLL_CON0)|0x8000
+wait 1.ms
+
+;; //clock switch setting
+d.s &PLL_CLKSW_FDIV7 %word %le 0xC100
+d.s &PLL_MD_GLOBAL_CON1 %word %le data.word(&MEM_CLASS:&PLL_MD_GLOBAL_CON1)|0x20000000
+d.s &PLL_CLKSW_CKSEL0 %word %le 0x2010
+d.s &PLL_CLKSW_CKSEL6 %word %le 0x0003
+d.s &PLL_CLKSW_CKSEL4 %word %le 0x5500
+d.s &PLL_CLKSW_CKSEL1 %word %le 0xB000
+d.s &PLL_CLKSW_CKSEL2 %word %le 0x6F20
+d.s &PLL_CLKSW_CKSEL3 %word %le 0x0123
+d.s &PLL_CLKSW_CKSEL5 %word %le data.word(&MEM_CLASS:&PLL_CLKSW_CKSEL5)|0x0020
+;;d.s &PLL_CLKSW_CKSEL3 %word %le data.word(&MEM_CLASS:&PLL_CLKSW_CKSEL3)|0x0002
+;;d.s &PLL_CLKSW_CKSEL5 %word %le data.word(&MEM_CLASS:&PLL_CLKSW_CKSEL5)|0x0010
+d.s &PLL_CLKSW_CKSEL8 %word %le data.word(&MEM_CLASS:&PLL_CLKSW_CKSEL8)|0x04FF
+
+d.s &PLL_PLL_CON2_1 %word %le data.word(&MEM_CLASS:&PLL_PLL_CON2_1)|0x1001
+
+d.s &PLL_CR4PLL2_CON0 %word %le data.word(&MEM_CLASS:&PLL_CR4PLL2_CON0)&~0x8000
+d.s &PLL_OGTWPLL_CON0 %word %le data.word(&MEM_CLASS:&PLL_OGTWPLL_CON0)&~0x8000
+
+
+d.s &PLL_CLKSW_CKSEL7 %word %le 0x0001
+
+;; relese PLL force
+
+PRINT "MD PLL init OK, please check result by frequency meter"
+
+;STOP
+;ENDDO
+

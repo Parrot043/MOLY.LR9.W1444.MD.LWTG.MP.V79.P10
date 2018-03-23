@@ -1,0 +1,17 @@
+
+        * (DRAM_EX_ROCODE)  /*CODE_PROTECT*/
+        * (SNORCODE*)
+        * (SECOND_PART*)
+        * (.text*)
+        * (.rodata*)
+        * (i.*)
+        * (.ARM.extab*)
+        KEEP(* (Keep_CODE))
+
+        . = ALIGN(64);
+        PHY_EXTSRAM_RO$$Base = .;
+        * (PHY_EXTSRAM_RO)
+        . = ALIGN(4);
+        PHY_EXTSRAM_RO$$Limit = .;
+        PHY_EXTSRAM_RO$$Length = ABSOLUTE(PHY_EXTSRAM_RO$$Limit - PHY_EXTSRAM_RO$$Base);
+		

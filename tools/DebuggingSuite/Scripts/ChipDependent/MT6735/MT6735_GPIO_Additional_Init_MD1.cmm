@@ -1,0 +1,110 @@
+
+PRINT "MD GPIO Configuration by CMM"
+;;;;;;;;;; register base
+&AP_GPIO_base=0xA0211000
+&MEM_CLASS="sd"
+
+&tmp1=0
+&tmp2=0
+
+PRINT "------------------------------------------------------------------------"
+PRINT "BSI driving config"
+PRINT "-------------------"
+&GPIO_DRV0_G2_9=(&AP_GPIO_base+0x0A74)
+&GPIO_DRV0_G2_9_MASK=0x60
+&GPIO_DRV0_G2_9_VAL=0x20
+&tmp1=DATA.LONG(&mclass:&GPIO_DRV0_G2_9)
+&tmp2=(((&tmp1)&(~&GPIO_DRV0_G2_9_MASK))|(&GPIO_DRV0_G2_9_VAL))
+PRINT "GPIO_DRV0_G2_9(0x" &GPIO_DRV0_G2_9 ") = 0x" FORMAT.HEX(8,&tmp1)
+PRINT "GPIO_DRV0_G2_9_MASK = 0x" FORMAT.HEX(8,&GPIO_DRV0_G2_9_MASK)
+PRINT "GPIO_DRV0_G2_9_VAL = 0x" FORMAT.HEX(8,&GPIO_DRV0_G2_9_VAL)
+PRINT "        TARGET = 0x" FORMAT.HEX(8,&tmp2)
+Data.Set &mclass:&GPIO_DRV0_G2_9 %LE %LONG &tmp2
+
+&GPIO_DRV0_G3_0=(&AP_GPIO_base+0x1B70)
+&GPIO_DRV0_G3_0_MASK=0x06
+&GPIO_DRV0_G3_0_VAL=0x02
+&tmp1=DATA.LONG(&mclass:&GPIO_DRV0_G3_0)
+&tmp2=(((&tmp1)&(~&GPIO_DRV0_G3_0_MASK))|(&GPIO_DRV0_G3_0_VAL))
+PRINT "GPIO_DRV0_G3_0(0x" &GPIO_DRV0_G3_0 ") = 0x" FORMAT.HEX(8,&tmp1)
+PRINT "GPIO_DRV0_G3_0_MASK = 0x" FORMAT.HEX(8,&GPIO_DRV0_G3_0_MASK)
+PRINT "GPIO_DRV0_G3_0_VAL = 0x" FORMAT.HEX(8,&GPIO_DRV0_G3_0_VAL)
+PRINT " 	   TARGET = 0x" FORMAT.HEX(8,&tmp2)
+Data.Set &mclass:&GPIO_DRV0_G3_0 %LE %LONG &tmp2
+
+
+PRINT "------------------------------------------------------------------------"
+PRINT "CoreSonic Jtag config"
+PRINT "-------------------"
+;;//CORESONIC_SWCk
+&GPIO_MODE_21=(&AP_GPIO_base+0x320)
+&GPIO_MODE_21_MASK=0x38
+&GPIO_MODE_21_VAL=0x20
+&tmp1=DATA.LONG(&mclass:&GPIO_MODE_21)
+&tmp2=(((&tmp1)&(~&GPIO_MODE_21_MASK))|(&GPIO_MODE_21_VAL))
+PRINT "GPIO_MODE_21(0x" &GPIO_MODE_21 ") = 0x" FORMAT.HEX(8,&tmp1)
+PRINT "GPIO_MODE_21_MASK = 0x" FORMAT.HEX(8,&GPIO_MODE_21_MASK)
+PRINT "GPIO_MODE_21_VAL = 0x" FORMAT.HEX(8,&GPIO_MODE_21_VAL)
+PRINT " 	   TARGET = 0x" FORMAT.HEX(8,&tmp2)
+Data.Set &mclass:&GPIO_MODE_21 %LE %LONG &tmp2
+
+;;//CORESONIC_SWD
+&GPIO_MODE_82=(&AP_GPIO_base+0x380)
+&GPIO_MODE_82_MASK=0x1C0
+&GPIO_MODE_82_VAL=0x100
+&tmp1=DATA.LONG(&mclass:&GPIO_MODE_82)
+&tmp2=(((&tmp1)&(~&GPIO_MODE_82_MASK))|(&GPIO_MODE_82_VAL))
+PRINT "GPIO_MODE_82(0x" &GPIO_MODE_82 ") = 0x" FORMAT.HEX(8,&tmp1)
+PRINT "GPIO_MODE_82_MASK = 0x" FORMAT.HEX(8,&GPIO_MODE_82_MASK)
+PRINT "GPIO_MODE_82_VAL = 0x" FORMAT.HEX(8,&GPIO_MODE_82_VAL)
+PRINT " 	   TARGET = 0x" FORMAT.HEX(8,&tmp2)
+Data.Set &mclass:&GPIO_MODE_82 %LE %LONG &tmp2
+
+
+PRINT "------------------------------------------------------------------------"
+PRINT "UART config"
+PRINT "-------------------"
+;;//Uart mode 77 = LTE_UTXD(O);  mode 76 =KTE_URXD(I)
+&GPIO_MODE_7677=(&AP_GPIO_base+0x370)
+&GPIO_MODE_7677_MASK=0x1F80000
+&GPIO_MODE_7677_VAL=0x1680000
+&tmp1=DATA.LONG(&mclass:&GPIO_MODE_7677)
+&tmp2=(((&tmp1)&(~&GPIO_MODE_7677_MASK))|(&GPIO_MODE_7677_VAL))
+PRINT "GPIO_MODE_7677(0x" &GPIO_MODE_7677 ") = 0x" FORMAT.HEX(8,&tmp1)
+PRINT "GPIO_MODE_7677_MASK = 0x" FORMAT.HEX(8,&GPIO_MODE_7677_MASK)
+PRINT "GPIO_MODE_7677_VAL = 0x" FORMAT.HEX(8,&GPIO_MODE_7677_VAL)
+PRINT " 	   TARGET = 0x" FORMAT.HEX(8,&tmp2)
+Data.Set &mclass:&GPIO_MODE_7677 %LE %LONG &tmp2
+
+PRINT "MD GPIO Configuration Completed"
+
+PRINT "------------------------------------------------------------------------"
+PRINT "SIM config"
+PRINT "-------------------"
+;;//SIM mode config. mode 160~165
+&GPIO_MODE_160=(&AP_GPIO_base+0x400)
+&GPIO_MODE_160_MASK=0x0007FFFF
+&GPIO_MODE_160_VAL=0x00011249
+&tmp1=DATA.LONG(&mclass:&GPIO_MODE_160)
+&tmp2=(((&tmp1)&(~&GPIO_MODE_160_MASK))|(&GPIO_MODE_160_VAL))
+PRINT "GPIO_MODE_160(0x" &GPIO_MODE_160 ") = 0x" FORMAT.HEX(8,&tmp1)
+PRINT "GPIO_MODE_160_MASK = 0x" FORMAT.HEX(8,&GPIO_MODE_160_MASK)
+PRINT "GPIO_MODE_160_VAL = 0x" FORMAT.HEX(8,&GPIO_MODE_160_VAL)
+PRINT " 	   TARGET = 0x" FORMAT.HEX(8,&tmp2)
+Data.Set &mclass:&GPIO_MODE_160 %LE %LONG &tmp2
+
+;;//SIM PAD PUPD
+&GPIO_SIM_PAD=(&AP_GPIO_base+0xC90)
+&GPIO_SIM_PAD_MASK=0xFFFFFFFF
+&GPIO_SIM_PAD_VAL=0x52005200
+&tmp1=DATA.LONG(&mclass:&GPIO_SIM_PAD)
+&tmp2=(((&tmp1)&(~&GPIO_SIM_PAD_MASK))|(&GPIO_SIM_PAD_VAL))
+PRINT "GPIO_SIM_PAD(0x" &GPIO_SIM_PAD ") = 0x" FORMAT.HEX(8,&tmp1)
+PRINT "GPIO_SIM_PAD_MASK = 0x" FORMAT.HEX(8,&GPIO_SIM_PAD_MASK)
+PRINT "GPIO_SIM_PAD_VAL = 0x" FORMAT.HEX(8,&GPIO_SIM_PAD_VAL)
+PRINT " 	   TARGET = 0x" FORMAT.HEX(8,&tmp2)
+Data.Set &mclass:&GPIO_SIM_PAD %LE %LONG &tmp2
+
+PRINT "MD GPIO Configuration Completed"
+
+

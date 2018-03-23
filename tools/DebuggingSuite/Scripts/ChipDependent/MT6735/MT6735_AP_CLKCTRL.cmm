@@ -1,0 +1,80 @@
+ENTRY &MD &VIEW
+
+LOCAL &mclass
+
+LOCAL &POWERON_CONFIG_SET
+LOCAL &PCM_INI_PWRON1_REG
+
+LOCAL &MD_SRCLKEN_CTRL
+LOCAL &MD_SRCLKEN_CTRL_MSK
+LOCAL &MD_SRCLKEN_CTRL_VAL
+
+
+
+LOCAL &tmp1
+LOCAL &tmp2
+
+&mclass="pm"
+
+IF "&VIEW"=="AP"
+(
+    PRINT "AP VIEW"
+	&MD_SRCLKEN_CTRL=0x10000338
+	&POWERON_CONFIG_SET=0x10006000
+	&PCM_INI_PWRON1_REG=0x10006014
+)
+ELSE
+(
+    PRINT "MD VIEW"
+	&MD_SRCLKEN_CTRL=0xA0000338
+	&POWERON_CONFIG_SET=0xA0006000
+	&PCM_INI_PWRON1_REG=0xA0006014
+)
+
+&MD_SRCLKEN_CTRL_MSK=0x0000003C
+&MD_SRCLKEN_CTRL_VAL=0x00000024
+
+&tmp1=0
+&tmp2=0
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+PRINT "------------------------------------------------------------------------"
+PRINT "Set SRCLKEN Sharing"
+PRINT "-------------------"
+; MD_SRCLKEN_CTRL
+&tmp1=DATA.LONG(&mclass:&MD_SRCLKEN_CTRL)
+&tmp2=(((&tmp1)&(~&MD_SRCLKEN_CTRL_MSK))|(&MD_SRCLKEN_CTRL_VAL))
+PRINT "MD_SRCLKEN_CTRL(0x" &MD_SRCLKEN_CTRL ") = 0x" FORMAT.HEX(8,&tmp1)
+PRINT "MD_SRCLKEN_CTRL_MSK = 0x" FORMAT.HEX(8,&MD_SRCLKEN_CTRL_MSK)
+PRINT "MD_SRCLKEN_CTRL_VAL = 0x" FORMAT.HEX(8,&MD_SRCLKEN_CTRL_VAL)
+PRINT "        TARGET = 0x" FORMAT.HEX(8,&tmp2)
+Data.Set &mclass:&MD_SRCLKEN_CTRL %LE %LONG &tmp2
+WAIT 1ms
+&tmp1=DATA.LONG(&mclass:&MD_SRCLKEN_CTRL)
+PRINT "MD_SRCLKEN_CTRL(0x" &MD_SRCLKEN_CTRL ") = 0x" FORMAT.HEX(8,&tmp1)
+PRINT "------------------------------------------------------------------------"
+PRINT " "
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+PRINT "------------------------------------------------------------------------"
+PRINT "SRCLKEN O0 FORCE ON"
+PRINT "------------------------"
+Data.Set &mclass:&POWERON_CONFIG_SET %LE %LONG 0x0B160001 ; write magic key
+&tmp1=DATA.LONG(&mclass:&PCM_INI_PWRON1_REG)
+; O0 bit 14 ; O1 bit 21
+&tmp2=&tmp1|(1<<14.)
+PRINT "PCM_INI_PWRON1_REG(0x" &PCM_INI_PWRON1_REG ") == 0x" FORMAT.HEX(8,&tmp1)
+PRINT "PCM_INI_PWRON1_REG(0x" &PCM_INI_PWRON1_REG ") <- 0x" FORMAT.HEX(8,&tmp2)
+Data.Set &mclass:&PCM_INI_PWRON1_REG %LE %LONG &tmp2
+WAIT 1ms
+&tmp1=DATA.LONG(&mclass:&PCM_INI_PWRON1_REG)
+PRINT "PCM_INI_PWRON1_REG(0x" &PCM_INI_PWRON1_REG ") == 0x" FORMAT.HEX(8,&tmp1)
+PRINT "------------------------------------------------------------------------"
+PRINT " "
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+
+ENDDO

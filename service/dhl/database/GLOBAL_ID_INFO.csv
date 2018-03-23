@@ -1,0 +1,99 @@
+OTA_GLOBAL_ID,Description,Note
+PROTOCOL_SECTION__GAN_TCP,,used by current real MD case?
+PROTOCOL_SECTION__GAN_UDP,,used by current real MD case?
+PROTOCOL_SECTION__GSM_RLCMAC_DL,gsm_rlcmac_dl,
+PROTOCOL_SECTION__GSM_RLCMAC_UL,gsm_rlcmac_ul,
+PROTOCOL_SECTION__LLC,llcgprs,
+PROTOCOL_SECTION__NAS,gsm_a_dtap,
+PROTOCOL_SECTION__NAS_MM_UL,gsm_a_dtap,
+PROTOCOL_SECTION__NAS_MM_DL,gsm_a_dtap,
+PROTOCOL_SECTION__NAS_GMM_UL,gsm_a_dtap,
+PROTOCOL_SECTION__NAS_GMM_DL,gsm_a_dtap,
+PROTOCOL_SECTION__NAS_SMS_RPDU,gsm_a_rp,
+PROTOCOL_SECTION__NAS_SMS_TPDU,gsm_sms,
+PROTOCOL_SECTION__NAS_SMS_TPDU_DELIVER,gsm_sms,
+PROTOCOL_SECTION__NAS_SMS_TPDU_DELIVER_REPORT_ACK,gsm_sms,
+PROTOCOL_SECTION__NAS_SMS_TPDU_DELIVER_REPORT_NACK,gsm_sms,
+PROTOCOL_SECTION__NAS_SMS_TPDU_STATUS_REPORT,gsm_sms,
+PROTOCOL_SECTION__NAS_SMS_TPDU_COMMAND,gsm_sms,
+PROTOCOL_SECTION__NAS_SMS_TPDU_SUBMIT,gsm_sms,
+PROTOCOL_SECTION__NAS_SMS_TPDU_SUBMIT_REPORT_ACK,gsm_sms,
+PROTOCOL_SECTION__NAS_SMS_TPDU_SUBMIT_REPORT_NACK,gsm_sms,
+PROTOCOL_SECTION__NAS_SMS_TPDU_END,gsm_sms,
+PROTOCOL_SECTION__NAS_CC_UL,gsm_a_dtap,
+PROTOCOL_SECTION__NAS_CC_DL,gsm_a_dtap,
+PROTOCOL_SECTION__NAS_SM,gsm_a_dtap,
+PROTOCOL_SECTION__NAS_END,gsm_a_dtap,
+PROTOCOL_SECTION__RR,gsm_a_dtap,
+PROTOCOL_SECTION__RR_with_pseudolength,gsm_a_ccch,
+PROTOCOL_SECTION__RR_short_PD,gsm_a_sacch,
+PROTOCOL_SECTION__RR_dl_with_pseudolength,gsm_a_ccch,
+PROTOCOL_SECTION__RR_ul_with_pseudolength,gsm_a_ccch,
+PROTOCOL_SECTION__RR_end,,
+PROTOCOL_SECTION__SNDCP,,used by current real MD case?
+PROTOCOL_SECTION__SNDCPXID,,used by current real MD case?
+PROTOCOL_SECTION__LTE_RRC_BCCH_BCH,lte-rrc.bcch.bch,
+PROTOCOL_SECTION__LTE_RRC_BCCH_DL_SCH,lte-rrc.bcch.dl.sch,
+PROTOCOL_SECTION__LTE_RRC_DL_CCCH,lte-rrc.dl.ccch,
+PROTOCOL_SECTION__LTE_RRC_DL_DCCH,lte-rrc.dl.dcch,
+PROTOCOL_SECTION__LTE_RRC_PCCH,lte-rrc.pcch,
+PROTOCOL_SECTION__LTE_RRC_UL_CCCH,lte-rrc.ul.ccch,
+PROTOCOL_SECTION__LTE_RRC_UL_DCCH,lte-rrc.ul.dcch,
+PROTOCOL_SECTION__NAS_EPS,nas-eps,
+PROTOCOL_SECTION__NAS_EPS_PLAIN,nas-eps_plain,
+PROTOCOL_SECTION__RRC_BCCH_BCH,,used by current real MD case?
+PROTOCOL_SECTION__RRC_BCCH_FACH,rrc.bcch.fach,
+PROTOCOL_SECTION__RRC_DL_CCCH,rrc.dl.ccch,
+PROTOCOL_SECTION__RRC_DL_DCCH,rrc.dl.dcch,
+PROTOCOL_SECTION__RRC_DL_SHCCH,,used by current real MD case?
+PROTOCOL_SECTION__RRC_MCCH,,used by current real MD case?
+PROTOCOL_SECTION__RRC_MSCH,,used by current real MD case?
+PROTOCOL_SECTION__RRC_PCCH,rrc.pcch,
+PROTOCOL_SECTION__RRC_UL_CCCH,rrc.ul.ccch,
+PROTOCOL_SECTION__RRC_UL_DCCH,rrc.ul.dcch,
+PROTOCOL_SECTION__RRC_UL_SHCCH,,used by current real MD case?
+PROTOCOL_SECTION__RRC_HANDOVER_TO_UTRAN_COMMAND,rrc.irat.ho_to_utran_cmd,
+PROTOCOL_SECTION__RRC_IRAT_HO_INFO,rrc.irat.irat_ho_info,
+PROTOCOL_SECTION__RRC_SI_MIB,rrc.si.mib,
+PROTOCOL_SECTION__RRC_SI_SB1,rrc.si.sb1,
+PROTOCOL_SECTION__RRC_SI_SB2,rrc.si.sb2,
+PROTOCOL_SECTION__RRC_SI_SIB1,rrc.si.sib1,
+PROTOCOL_SECTION__RRC_SI_SIB2,rrc.si.sib20,
+PROTOCOL_SECTION__RRC_SI_SIB3,rrc.si.sib3,
+PROTOCOL_SECTION__RRC_SI_SIB4,rrc.si.sib4,
+PROTOCOL_SECTION__RRC_SI_SIB5,rrc.si.sib5,
+PROTOCOL_SECTION__RRC_SI_SIB5bis,rrc.si.sib5bis,
+PROTOCOL_SECTION__RRC_SI_SIB6,rrc.si.sib6,
+PROTOCOL_SECTION__RRC_SI_SIB7,rrc.si.sib7,
+PROTOCOL_SECTION__RRC_SI_SIB8,,used by current real MD case?
+PROTOCOL_SECTION__RRC_SI_SIB9,,used by current real MD case?
+PROTOCOL_SECTION__RRC_SI_SIB10,,used by current real MD case?
+PROTOCOL_SECTION__RRC_SI_SIB11,rrc.si.sib11,
+PROTOCOL_SECTION__RRC_SI_SIB11bis,rrc.si.sib11bis,
+PROTOCOL_SECTION__RRC_SI_SIB12,rrc.si.sib12,
+PROTOCOL_SECTION__RRC_SI_SIB13,,used by current real MD case?
+PROTOCOL_SECTION__RRC_SI_SIB13_1,,used by current real MD case?
+PROTOCOL_SECTION__RRC_SI_SIB13_2,,used by current real MD case?
+PROTOCOL_SECTION__RRC_SI_SIB13_3,,used by current real MD case?
+PROTOCOL_SECTION__RRC_SI_SIB13_4,,used by current real MD case?
+PROTOCOL_SECTION__RRC_SI_SIB14,,used by current real MD case?
+PROTOCOL_SECTION__RRC_SI_SIB15,,used by current real MD case?
+PROTOCOL_SECTION__RRC_SI_SIB15bis,,used by current real MD case?
+PROTOCOL_SECTION__RRC_SI_SIB15_1,,used by current real MD case?
+PROTOCOL_SECTION__RRC_SI_SIB15_1bis,,used by current real MD case?
+PROTOCOL_SECTION__RRC_SI_SIB15_2,,used by current real MD case?
+PROTOCOL_SECTION__RRC_SI_SIB15_2bis,,used by current real MD case?
+PROTOCOL_SECTION__RRC_SI_SIB15_3,,used by current real MD case?
+PROTOCOL_SECTION__RRC_SI_SIB15_3bis,,used by current real MD case?
+PROTOCOL_SECTION__RRC_SI_SIB15_4,,used by current real MD case?
+PROTOCOL_SECTION__RRC_SI_SIB15_5,,used by current real MD case?
+PROTOCOL_SECTION__RRC_SI_SIB15_6,,used by current real MD case?
+PROTOCOL_SECTION__RRC_SI_SIB15_7,,used by current real MD case?
+PROTOCOL_SECTION__RRC_SI_SIB15_8,,used by current real MD case?
+PROTOCOL_SECTION__RRC_SI_SIB16,rrc.si.sib16,
+PROTOCOL_SECTION__RRC_SI_SIB17,rrc.si.sib17,
+PROTOCOL_SECTION__RRC_SI_SIB18,rrc.si.sib18,
+PROTOCOL_SECTION__RRC_SI_SIB19,rrc.si.sib19,
+PROTOCOL_SECTION__RRC_SI_SIB20,rrc.si.sib20,
+PROTOCOL_SECTION__LTE_LPP_UL,,used by current real MD case?
+PROTOCOL_SECTION__LTE_LPP_DL,,used by current real MD case?
